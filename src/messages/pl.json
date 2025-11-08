@@ -53,7 +53,18 @@
     "loginButton": "Zaloguj się",
     "itemsSummary": "Razem: {count} przedmiotów • €{amount}",
     "loginToOrder": "Zaloguj się, aby złożyć zamówienie",
-    "login": "Zaloguj się"
+    "login": "Zaloguj się",
+    "items": "przedmiot",
+    "itemsPlural": "przedmiotów",
+    "totalItems": "Przedmioty",
+    "shipping": "Dostawa",
+    "free": "Darmowa",
+    "totalAmount": "Całkowita kwota",
+    "perItem": "za sztukę",
+    "clearCart": "Wyczyść koszyk",
+    "loginRequired": "Musisz się zalogować, aby złożyć zamówienie",
+    "securePayment": "Bezpieczna płatność",
+    "fastDelivery": "Szybka dostawa"
   },
   "order": {
     "title": "Zamówienie",
