@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Token Test</title>
+</head>
+<body>
+    <h1>Token Test</h1>
+    <button onclick="testToken()">Test Token</button>
+    <div id="result"></div>
+
+    <script>
+        async function testToken() {
+            const token = localStorage.getItem('leafside_auth_token');
+            if (!token) {
+                document.getElementById('result').innerHTML = 'No token found';
+                return;
+            }
+
+            try {
+                // Test profile endpoint
+                const response = await fetch('/api/auth/profile', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                const result = await response.text();
+                document.getElementById('result').innerHTML = `
+                    <h3>Profile Response (${response.status}):</h3>
+                    <pre>${result}</pre>
+                `;
+            } catch (error) {
+                document.getElementById('result').innerHTML = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
